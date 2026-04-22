@@ -7,9 +7,9 @@ export default[
         "titulo": "Exposicion 1",
         "rutina":[
 
-                { "ejercicio": "Quiza el justo ganador", "img": image1, "reps": 1 },
-                { "ejercicio": "merecido", "img": image2, "reps": 21 },
-                {"ejercicio": "Clasico pero basico", "img": image3, "reps": 120 },
+                { "ejercicio": "Laterales", "img": image1, "reps": 1 },
+                { "ejercicio": "Puente", "img": image2, "reps": 21 },
+                {"ejercicio": "Sentadillas", "img": image3, "reps": 120 },
             ]
     }
 
