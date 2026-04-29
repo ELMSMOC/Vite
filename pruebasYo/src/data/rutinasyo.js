@@ -1,7 +1,7 @@
 
 import img1 from "../assets/imgs/laterales.png"
-import img1 from "../assets/imgs/puente.png"
-import img1 from "../assets/imgs/sentadillas.png"
+import img2 from "../assets/imgs/puente.png"
+import img3 from "../assets/imgs/sentadillas.png"
 
 export default [
     {
