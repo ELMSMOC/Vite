@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import styled, { css } from 'styled-components';
+import { Panel, Box } from './styled';
 
 import './App.css'
 
@@ -13,24 +15,40 @@ const App =()=> {
   const pregunta = preguntas[preguntaActual];
 
   const respuestaSeleccionada = (correcta) => {
-      console.log(correcta ? "Correcta" : "Incorrecta");
-      if (correcta) {
-        setPreguntaActual(preguntaActual + 1);
-      } else {
-        alert("Respuesta incorrecta");
-      }
-  };
+    if(correcta){
+      setPreguntaActual(preguntaActual<preguntas.length-1? preguntaActual+1 : 0);
+      setCount(count+1);
+    } else {
+      setPreguntaActual(preguntaActual>0? preguntaActual-1 : 0);
+    }
+  }
+    
+  {/*
+    setPreguntaActual(correcta?
+    preguntaActual<preguntas.length-1? preguntaActual+1 : 0 :
+    preguntaActual>0? preguntaActual-1 : 0
+  );
+  */}
+
 
 
   return (
-    <div>
-      <h1>Trivial</h1>
-      <h2>{pregunta.pregunta}</h2>
+    <Box>
+      <div>
+        <h1>Trivial</h1>
+      </div>
+      <div>
+        <h2>{pregunta.pregunta}</h2>
+        <img src={pregunta.img} alt={pregunta.pregunta} />
+      </div>
+      <Panel>
+        <h2>Puntuación: {count}</h2>
         {pregunta.opciones.map(opcion => <div><button onClick={() => respuestaSeleccionada(opcion.correcta)}>X</button> {opcion.txt}</div>)}
+      </Panel>
       
 
        
-    </div>
+    </Box>
   )
 }
 
