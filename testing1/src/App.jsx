@@ -38,18 +38,35 @@ function App() {
 
 // Funcion para cambiar de dia
 
+const siguiente = ()=>{
+  setEjercicioActual(0);
+  setContador(5);
+  setCrono(false);
+
+  setTrabajoActual((previo)=>(previo+1) % dias.length);
+}
+
+const anterior = ()=>{
+  setEjercicioActual(0);
+  setContador(5);
+  setCrono(false);
+  setTrabajoActual((previo)=>(previo-1 + dias.length) % dias.length);
+}
+
   return (
       <div className="App">
           <h1>{dia.titulo}</h1>
 
-          <Button onClick={}>Anterior</Button>
+          <Button onClick={anterior}>Anterior</Button>
 
-          <Button onClick={()=> setCrono(true)} disabled={crono}>Iniciar</Button>
-          {/*<Button onClick={()=> setCrono(false)}>Detener</Button>*/}
+          {/*<Button onClick={()=> setCrono(true)} disabled={crono}>Iniciar</Button>
+          <Button onClick={()=> setCrono(false)}>Detener</Button>*/}
 
           <Button onClick={()=> setCrono(!crono)}>{ crono ? "Detener" : "Iniciar" }</Button>
 
-          <Button onClick={}>Siguiente</Button>
+          
+
+          <Button onClick={siguiente}>Siguiente</Button>
 
           <p>Tiempo: {contador} segundos</p>
           <ItemsRow>
