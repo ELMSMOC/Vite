@@ -1,6 +1,11 @@
-import america from './../public/imgs/America.jpg';
-import megazigzag from './../public/imgs/megazigzag.jpg';
-import terminator from './public/imgs/terminator.jpg';
+import america from './../../public/imgs/America.jpg';
+import megazigzag from './../../public/imgs/megazigzag.jpg';
+import terminator from './../../public/imgs/terminator.jpg';
+import stranger from './../../public/imgs/stranger.jpg';
+import manzanares from './../../public/imgs/manzanares.jpg';
+import dobby from './../../public/imgs/dobby.jpg';
+import video from './../../public/imgs/vid.mp4';
+import audio from './../../public/imgs/Kate Ryan - Desenchantee.mp3';
 
 export default [
     {
@@ -35,10 +40,10 @@ export default [
             {"txt":"Skynet", "correcta": false}
         ]
         
-    }   
-    /*,
+    },
     {
         "pregunta": "Quien era el mejor amigo de Will byers en Stranger Things?",
+        "img": stranger,
         "opciones": [
             {"txt":"Demogorgon", "correcta": false},
             {"txt":"Mike Wheeler", "correcta": true},
@@ -49,6 +54,7 @@ export default [
     },
     {
         "pregunta": "Que Rio pasa por Madrid capital",
+        "img": manzanares,
         "opciones": [
             {"txt":"Amazonas", "correcta": false},
             {"txt":"Tamesis", "correcta": false},
@@ -59,6 +65,7 @@ export default [
     },
     {
         "pregunta": "¿Que le regalo Harry a Dobbye para ser libre?",
+        "img": dobby,
         "opciones": [
             {"txt":"Un gazpachito rico", "correcta": false},
             {"txt":"Un libro", "correcta": false},
@@ -69,6 +76,7 @@ export default [
     },
     {
         "pregunta": "En que pais se encuentra el salto Angel",
+        "img": video,
         "opciones": [
             {"txt":"Canada", "correcta": false},
             {"txt":"Venezuela", "correcta": true},
@@ -79,6 +87,7 @@ export default [
     },
     {
         "pregunta": "Que simbolo del zodianco es un cangrejo",
+        "img": audio,
         "opciones": [
             {"txt":"Capricornio", "correcta": false},
             {"txt":"Piscis", "correcta": false},
@@ -86,7 +95,7 @@ export default [
             {"txt":"Cáncer", "correcta": true}
         ]
         
-    },
+    }/*,
     {
         "pregunta": "¿Cuál es la capital de Francia?",
         "opciones": [
